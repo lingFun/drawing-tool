@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+	<left>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+      		<VBox prefHeight="200.0" prefWidth="100.0">
+      			<children>
+      				<TitledPane text="Drawing Color">
+      					<content>
+      						<VBox>
+      							<children>
+      								<RadioButton fx:id="rbBlack" mnemonicParsing="false" selected="true" text="Black">
+      									<VBox.margin>
+      										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      									</VBox.margin>
+      									<font>
+      										<Font name="System Bold" size="12.0" />
+      									</font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="togGrpColor" />
+                                 </toggleGroup>
+      								</RadioButton>
+      								<RadioButton fx:id="rbRed" mnemonicParsing="false" text="Red" textFill="RED" toggleGroup="$togGrpColor">
+      									<VBox.margin>
+      										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      									</VBox.margin>
+      									<font>
+      										<Font name="System Bold" size="12.0" />
+      									</font>
+      								</RadioButton>
+      								<RadioButton fx:id="rbGreen" mnemonicParsing="false" text="Green" textFill="#008022" toggleGroup="$togGrpColor">
+      									<VBox.margin>
+      										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      									</VBox.margin>
+      									<font>
+      										<Font name="System Bold" size="12.0" />
+      									</font>
+      								</RadioButton>
+      								<RadioButton fx:id="rbBlue" mnemonicParsing="false" text="Blue" textFill="BLUE" toggleGroup="$togGrpColor">
+      									<VBox.margin>
+      										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      									</VBox.margin>
+      									<font>
+      										<Font name="System Bold" size="12.0" />
+      									</font>
+      								</RadioButton>
+      							</children>
+      						</VBox>
+      					</content>
+      					<padding>
+      						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      					</padding>
+      				</TitledPane>
+      				<TitledPane text="Pen Size">
+      					<content>
+      						<VBox>
+      							<children>
+      								<RadioButton fx:id="rbSmall" mnemonicParsing="false" text="Small">
+      									<VBox.margin>
+      										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      									</VBox.margin>
+      									<font>
+      										<Font name="System Bold" size="12.0" />
+      									</font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="togGrpSize" />
+                                 </toggleGroup>
+      								</RadioButton>
+      								<RadioButton fx:id="rbMedium" mnemonicParsing="false" selected="true" text="Medium" toggleGroup="$togGrpSize">
+      									<VBox.margin>
+      										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      									</VBox.margin>
+      									<font>
+      										<Font name="System Bold" size="13.0" />
+      									</font>
+      								</RadioButton>
+      								<RadioButton fx:id="rbLarge" mnemonicParsing="false" text="Large" toggleGroup="$togGrpSize">
+      									<VBox.margin>
+      										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      									</VBox.margin>
+      									<font>
+      										<Font name="System Bold" size="14.0" />
+      									</font>
+      								</RadioButton>
+      							</children>
+      						</VBox>
+      					</content>
+      					<padding>
+      						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      					</padding>
+      				</TitledPane>
+                  <TitledPane prefHeight="95.0" prefWidth="117.0" text="Shape">
+                     <content>
+                        <VBox>
+                           <children>
+                              <RadioButton fx:id="rbCircle" mnemonicParsing="false" selected="true" text="Circle">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="togGrpSize1" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rbSquare" mnemonicParsing="false" text="Square" toggleGroup="$togGrpSize1">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </content>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TitledPane>
+      			</children>
+      		</VBox>
+         </center>
+         <bottom>
+            <VBox prefHeight="100.0" BorderPane.alignment="CENTER">
+               <children>
+      				<Button fx:id="btnClear" alignment="TOP_CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnClearClicked" text="Clear">
+      					<VBox.margin>
+      						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      					</VBox.margin>
+      				</Button>
+      				<Button fx:id="btnUndo" alignment="TOP_CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUndo" text="Undo">
+      					<VBox.margin>
+      						<Insets left="10.0" right="10.0" />
+      					</VBox.margin>
+      				</Button>
+                  <Button fx:id="btnSerialize" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSerialize" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #ff0000;" text="Serialize" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+	</left>
+	<center>
+		<Pane fx:id="paneDraw" onMouseDragged="#drawPaneMouseDrag" prefHeight="585.0" prefWidth="575.0" BorderPane.alignment="CENTER">
+			<BorderPane.margin>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</BorderPane.margin>
+		</Pane>
+	</center>
+</BorderPane>
